@@ -1,47 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/wallet_holo_blue_light"
+    >
 
-    <ImageView
-        android:id="@+id/ajae_humor"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/ajae_9"/>
-
-    <LinearLayout
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:text="아재 측정기"
+        android:textSize="48sp"
         android:layout_gravity="center"
-        >
-
-        <TextView
-            android:id="@+id/temp_text"
-            android:visibility="gone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="웃어봐"
-            android:textSize="20dp"
-            />
-        <TextView
-            android:id="@+id/smile_count"
-            android:visibility="gone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="웃음횟수"
-            android:textSize="20dp"
-            />
-    </LinearLayout>
-
-    <io.harry.ajae_scouter.view.CameraPreview
-        android:id="@+id/camera_preview"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_margin="20dp"
-        android:layout_gravity="bottom|end"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tom_cruize"
         />
 
-</FrameLayout>
+</LinearLayout>

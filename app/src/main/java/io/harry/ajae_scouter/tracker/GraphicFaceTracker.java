@@ -4,23 +4,23 @@ import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.Tracker;
 import com.google.android.gms.vision.face.Face;
 
-import io.harry.ajae_scouter.activity.SplashActivity;
+import io.harry.ajae_scouter.faceapi.FaceListener;
 
 public class GraphicFaceTracker extends Tracker<Face> {
-    private final SplashActivity.FaceListener faceListener;
+    private final FaceListener faceListener;
 
-    public GraphicFaceTracker(SplashActivity.FaceListener faceListener) {
+    public GraphicFaceTracker(FaceListener faceListener) {
         this.faceListener = faceListener;
     }
 
     @Override
     public void onNewItem(int faceId, Face face) {
-        faceListener.onSmile(face.getIsSmilingProbability());
+        faceListener.onFaceDetect(face);
     }
 
     @Override
     public void onUpdate(Detector.Detections<Face> detections, Face face) {
-        faceListener.onSmile(face.getIsSmilingProbability());
+        faceListener.onFaceDetect(face);
     }
 
     @Override

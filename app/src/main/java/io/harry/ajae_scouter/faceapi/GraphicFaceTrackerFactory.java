@@ -1,16 +1,15 @@
-package io.harry.ajae_scouter.factory;
+package io.harry.ajae_scouter.faceapi;
 
 import com.google.android.gms.vision.MultiProcessor;
 import com.google.android.gms.vision.Tracker;
 import com.google.android.gms.vision.face.Face;
 
-import io.harry.ajae_scouter.activity.SplashActivity;
 import io.harry.ajae_scouter.tracker.GraphicFaceTracker;
 
 public class GraphicFaceTrackerFactory implements MultiProcessor.Factory<Face> {
-    private final SplashActivity.FaceListener faceListener;
+    private final FaceListener faceListener;
 
-    public GraphicFaceTrackerFactory(SplashActivity.FaceListener faceListener) {
+    public GraphicFaceTrackerFactory(FaceListener faceListener) {
         this.faceListener = faceListener;
     }
 
